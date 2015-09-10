@@ -4,15 +4,21 @@
 ### 所需工具
 1. msysgit(服务器端、客户端都需要安装)
 2. copssh(服务器端安装)
+
 ### windows配置
+
 1. 安装copssh时，会提示设置service account。假定新建的用户名为repo，即将在windows下创建一个名为repo的用户；
 
 ![创建repo用户](img/copssh_install.png)
 
 2. 修改计算机名，假定计算机名为TuringMachine。设定了计算机名后，git的远程访问可以用TuringMachine来代替IP地址。
+
 ### 生成ssh密钥/公钥
+
 打开git bash命令窗口。在窗口中输入`ssh-keygen -t rsa`。之后，会需要输入口令密码，这里只需连续三次回车，将所有口令密码设为空即可。密钥/公钥会生成在c:\user\Administrator\.ssh文件夹下，即id\_rsa和id\_rsa.pub。把你的公钥添加给服务器，即可访问服务器端。
+
 ### copssh配置
+
 1. 添加仓库
 
 打开COPSSH Control Panel。
@@ -30,7 +36,9 @@
 ![创建repo用户](img/authorized_keys.png)
 
 打开git bash命令窗口，输入`ssh repo@turingmachine`	可以看到ssh远程连接成功。说明已经配置好了访问公钥。
+
 ### ssh远程访问增加git命令
+
 虽然ssh可以远程访问repo@turingmachine，但是在远程状态下还不能使用git命令。
 
 解决方式如下：
@@ -42,4 +50,5 @@
 其中，$Git是指msysgit的安装目录  ，同理$ICW指COPSSH的安装目录。
 
 完成上述步骤后，已经可以在ssh状态下使用git命令。到此，windows下git的远程服务器已经搭建完成！
+
 ## git常用命令
