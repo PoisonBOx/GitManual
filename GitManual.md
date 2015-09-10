@@ -6,7 +6,7 @@
 2. copssh(服务器端安装)
 ### windows配置
 1. 安装copssh时，会提示设置service account。假定新建的用户名为repo，即将在windows下创建一个名为repo的用户；
-2. 
+
 ![创建repo用户](img/copssh_install.png)
 2. 修改计算机名，假定计算机名为TuringMachine。设定了计算机名后，git的远程访问可以用TuringMachine来代替IP地址。
 ### 生成ssh密钥/公钥
